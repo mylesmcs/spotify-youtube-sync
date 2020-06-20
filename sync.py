@@ -7,14 +7,12 @@ import json
 import time
 import os
 
-
 load_dotenv()
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 PLAYLIST = os.getenv("USER_PLAYLIST")
 
 service = build('youtube', 'v3', developerKey=API_KEY)
-
 
 # query a specific playlist for all videos
 def playlist_query(page=''):
@@ -59,7 +57,6 @@ else:
     write_video_list(video_titles)
 
 
-
 scope = 'user-library-read playlist-modify-private'
 
 token = util.prompt_for_user_token('milo', scope)
@@ -99,11 +96,3 @@ if track_ids:
             sp.user_playlist_add_tracks(user_id, '0RlQqSn3cpR0TnXriLnmtK', x)
     else:
         sp.user_playlist_add_tracks(user_id, '0RlQqSn3cpR0TnXriLnmtK',  track_ids)
-    
-    
-
-
-
-
-#playlists = sp.user_playlists('milo')
-#print(playlists)
