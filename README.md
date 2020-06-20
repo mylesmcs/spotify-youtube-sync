@@ -4,7 +4,7 @@ Add music to a Spotify playlist from a Youtube playlist
 # Setup
 1. Add a .env file with the following<br /> 
 
-Variable | Descriptionr
+Variable | Description
 ------------ | -------------
 SPOTIPY_CLIENT_ID | from Spotify developer console
 SPOTIPY_CLIENT_SECRET | from Spotify developer console
